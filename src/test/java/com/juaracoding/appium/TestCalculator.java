@@ -42,13 +42,52 @@ public class TestCalculator {
 	
 	@Test
 	public void testAdd() {
-		calculator.celcAdd();
-		System.out.println("hasil = "+calculator.getTxtResult());
+		calculator.calcAdd();
+		System.out.println("hasil pertambahan = "+calculator.getTxtResult());
 		assertEquals(calculator.getTxtResult(), "3");
+		delay(2);
+		calculator.Clear();
+	}
+	
+	@Test
+	public void testSub() {
+		calculator.calcSub();
+		System.out.println("hasil pengurangan = "+calculator.getTxtResult());
+		assertEquals(calculator.getTxtResult(), "7");
+		delay(2);
+		calculator.Clear();
+	}
+	
+	@Test
+	public void testMul() {
+		calculator.calcMul();
+		System.out.println("hasil perkalian = "+calculator.getTxtResult());
+		assertEquals(calculator.getTxtResult(), "24");
+		delay(2);
+		calculator.Clear();
+	}
+	
+	@Test
+	public void testDiv() {
+		calculator.calDiv();
+		System.out.println("hasil pembagian = "+calculator.getTxtResult());
+		assertEquals(calculator.getTxtResult(), "6");
+		delay(2);
+		calculator.Clear();
 	}
 	
 	@AfterClass
 	public void closeApp() {
 		driver.quit();
 	}
+	
+	static void delay(int detik) {
+		try {
+			Thread.sleep(1000 * detik);
+		} catch (InterruptedException e) {
+
+			e.printStackTrace();
+		}
+	}
+	
 }
