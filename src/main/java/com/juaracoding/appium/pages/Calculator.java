@@ -33,7 +33,7 @@ public class Calculator {
 	By Clear = By.id("com.coloros.calculator:id/clr");
 	/* web: xpath = //taghtml[contains(@attr,value)]*/
 	
-	//method
+//post test 20
 	public void calcAdd() {
 		driver.findElement(btnSatu).click();
 		driver.findElement(btnTambah).click();

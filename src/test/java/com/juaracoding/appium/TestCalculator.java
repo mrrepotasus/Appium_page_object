@@ -39,7 +39,7 @@ public class TestCalculator {
 	public void pageObject() {
 		calculator = new Calculator(driver);
 	}
-	
+//post test 20
 	@Test
 	public void testAdd() {
 		calculator.calcAdd();
